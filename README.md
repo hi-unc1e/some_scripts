@@ -2,11 +2,15 @@
 some common-used scripts
 一些常用的脚本
 
-# boolean_sqli_exp.py
+## boolean_sqli_exp.py
 sqli-lab less60之后的盲注脚本
 
-*注入原理*
+
+**注入原理**
+
+
 0. MYSQL提供字符串切片操作，如
+
 ```sql
 # mysql> select ascii('1'), (select substring(ascii('1'),1,1)), (select substring(ascii('1'),2,1));
 # +------------+------------------------------------+------------------------------------+
@@ -30,7 +34,9 @@ flag：len('uwpeCvsrLcadsa8P7wSn9Ix4') =24*
 访问次数 = (10+11+24)x3 = 125 < 130
 ```
 所以，我更加确定这是作者想要我们使用的方法
+
 5. 附录常见注入算法的复杂度
+
 ```markdown
 |算法|复杂度|
 |逐位比较|理论128次|
@@ -41,7 +47,7 @@ flag：len('uwpeCvsrLcadsa8P7wSn9Ix4') =24*
 我们一位、一位地跑出结果，以获取得到第3位字母'c'为例，其十进制的ascii值
 利用ascii(substring(query,3,1))中
 
-*运行结果*
+**运行结果**
 
 ```
 markdown
