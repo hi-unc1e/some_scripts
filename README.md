@@ -5,6 +5,16 @@ some common-used scripts
 # boolean_sqli_exp.py
 sqli-lab less60之后的盲注脚本
 *注入原理*
+0. MYSQL提供字符串切片操作，如
+```sql
+# mysql> select ascii('1'), (select substring(ascii('1'),1,1)), (select substring(ascii('1'),2,1));
+# +------------+------------------------------------+------------------------------------+
+# | ascii('1') | (select substring(ascii('1'),1,1)) | (select substring(ascii('1'),2,1)) |
+# +------------+------------------------------------+------------------------------------+
+# |         49 | 4                                  | 9                                  |
+# +------------+------------------------------------+------------------------------------+
+```
+
 1. id=1到id=12都有值，且值不同；可参考源码中的`["Dumb","Angelina","Dummy","secure","stupid","superman","batman","admin","admin1","admin2","admin3","dhakkan","admin4"]`，因此可根据页面内容反推id， 例如当页面出现admin2，就知道id=9
 
 2. 因此，使用分段带出ascii码值的方式注入，即将每一个字符的ascii值分成百位、十位、个位，每一位范围都是0~9，记为QUERY_ID
