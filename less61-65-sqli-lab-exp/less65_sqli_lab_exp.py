@@ -18,7 +18,7 @@ def str_to_hex(s):
     return '0x'+''.join([hex(ord(c)).replace('0x', '') for c in s])
 
 # initialize param
-url = "https://sec4ever.cn/Less-65/index.php?id=0\") "
+url = "https://sec4ever.cn/Less-65/index.php?id=0\")"
 reset_url ="https://sec4ever.cn/sql-connections/setup-db-challenge.php?id={}".format(url.split("sec4ever.cn")[1])   # /sql-connections/setup-db-challenge.php?id=/Less-60/index.php
 
 

