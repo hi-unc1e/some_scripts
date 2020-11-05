@@ -2,12 +2,10 @@
 some common-used scripts
 一些常用的脚本
 
-## boolean_sqli_exp.py
+## less61-65-sqli-lab-exp
 sqli-lab less60之后的盲注脚本
 
-
 **注入原理**
-
 
 0. MYSQL提供字符串切片操作，如
 
@@ -101,3 +99,15 @@ boolean_sqli_exp.py'
 [-]current content is:Jll98PQ8Uykakvpyc9SPstPB
 [+]FLAG is:Jll98PQ8Uykakvpyc9SPstPB
 ```
+
+## CTF
+CTF小工具
+
+## EXPs
+一些EXP脚本
+
+
+## puzzles
+自己出的CTF题，这是环境
+1. web_easy_upload
+上传漏洞靶场
