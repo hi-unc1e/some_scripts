@@ -1,0 +1,13 @@
+version: "2"
+services:
+  web:
+    container_name: web_easy_upload
+    image: php/5.6-fpm-alpine
+    restart: always
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    environment:
+      - FLAG=flag{Upload_Really_Good}

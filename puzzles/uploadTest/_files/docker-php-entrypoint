@@ -1,0 +1,15 @@
+#!/bin/sh
+
+/usr/sbin/sshd –D
+if [[ -f /tmp/flag.sh ]]; then
+	source /tmp/flag.sh
+fi
+
+
+php-fpm &
+
+nginx &
+
+/usr/sbin/sshd -D &
+
+tail -F /dev/null
